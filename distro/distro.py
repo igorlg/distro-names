@@ -2,13 +2,11 @@
 
 
 """distro.distro: provides entry point main()."""
+from __future__ import absolute_import
+import argparse
+from distro.data import DATA
 
 __version__ = '0.0.5'
-
-import argparse
-import sys
-
-from distro.data import DATA
 
 
 def main():
