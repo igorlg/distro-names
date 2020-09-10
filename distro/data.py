@@ -19,6 +19,8 @@ DATA = [
     {'name': 'bionic', 'versions': ['18.04', '18.04.2'], 'full_name': 'Bionic Beaver', 'flavour': 'Ubuntu'},
     {'name': 'cosmic', 'versions': ['18.10'], 'full_name': 'Cosmic Cuttlefish', 'flavour': 'Ubuntu'},
     {'name': 'disco', 'versions': ['19.04'], 'full_name': 'Disco Dingo', 'flavour': 'Ubuntu'},
+    {'name': 'fossa', 'versions': ['20.04'], 'full_name': 'Focal Fossa', 'flavour': 'Ubuntu'},
+    {'name': 'gorilla', 'versions': ['20.10'], 'full_name': 'Groovy Gorilla', 'flavour': 'Ubuntu'},
 
     # Debian (source: https://www.debian.org/releases/)
     {'name': 'squeeze', 'version': '6', 'flavour': 'Debian'},
@@ -26,6 +28,7 @@ DATA = [
     {'name': 'jessie', 'version': '8', 'flavour': 'Debian'},
     {'name': 'stretch', 'version': '9', 'flavour': 'Debian'},
     {'name': 'buster', 'version': '10', 'flavour': 'Debian'},
+    {'name': 'bullseye', 'version': '11', 'flavour': 'Debian'},
 
     # Mint (source: https://en.wikipedia.org/wiki/Linux_Mint_version_history)
     {'name': 'ada', 'version': '1.0', 'flavour': 'Mint'},
@@ -58,6 +61,8 @@ DATA = [
     {'name': 'tara', 'version': '19', 'flavour': 'Mint'},
     {'name': 'tessa', 'version': '19.1', 'flavour': 'Mint'},
     {'name': 'tina', 'version': '19.2', 'flavour': 'Mint'},
+    {'name': 'tricia', 'version': '19.3', 'flavour': 'Mint'},
+    {'name': 'ulyana', 'version': '20', 'flavour': 'Mint'},
 
     # Mac OS X (source: https://en.wikipedia.org/wiki/MacOS#Release_history)
     {'name': 'cheetah', 'version': '10.0', 'full_name': 'Mac OS X 10.0 Cheetah', 'flavour': 'MacOS'},
@@ -76,4 +81,21 @@ DATA = [
     {'name': 'high sierra', 'version': '10.13', 'full_name': 'macOS 10.13 High Sierra', 'flavour': 'MacOS'},
     {'name': 'mojave', 'version': '10.14', 'full_name': 'macOS 10.14 Mojave', 'flavour': 'MacOS'},
     {'name': 'catalina', 'version': '10.15', 'full_name': 'macOS 10.15 Catalina', 'flavour': 'MacOS'},
+    {'name': 'big sur', 'version': '11.0', 'full_name': 'macOS 11 Big Sur', 'flavour': 'MacOS'},
+
+    # Android (source: https://en.wikipedia.org/wiki/Android_version_history)
+    {'name': 'cupcake', 'version': '1.5', 'full_name': 'Android 1.5 Cupcake', 'flavour': 'Android'},
+    {'name': 'donut', 'version': '1.6', 'full_name': 'Android 1.6 Donut', 'flavour': 'Android'},
+    {'name': 'eclair', 'version': '2.0', 'full_name': 'Android 2.0 Eclair', 'flavour': 'Android'},
+    {'name': 'froyo', 'version': '2.2', 'full_name': 'Android 2.2 Froyo', 'flavour': 'Android'},
+    {'name': 'gingerbread', 'version': '2.3', 'full_name': 'Android 2.3 Gingerbread', 'flavour': 'Android'},
+    {'name': 'honeycomb', 'version': '3.0', 'full_name': 'Android 3.0 Honeycomb', 'flavour': 'Android'},
+    {'name': 'ice cream sandwich', 'version': '4.0', 'full_name': 'Android 4.0 Ice Cream Sandwich', 'flavour': 'Android'},
+    {'name': 'jelly bean', 'version': '4.1', 'full_name': 'Android 4.1 Jelly Bean', 'flavour': 'Android'},
+    {'name': 'kitkat', 'version': '4.4', 'full_name': 'Android 4.4 KitKat', 'flavour': 'Android'},
+    {'name': 'lollipop', 'version': '5.0', 'full_name': 'Android 5.0 Lollipop', 'flavour': 'Android'},
+    {'name': 'marshmallow', 'version': '6.0', 'full_name': 'Android 6.0 Marshmallow', 'flavour': 'Android'},
+    {'name': 'nougat', 'version': '7.0', 'full_name': 'Android 7.0 Nougat', 'flavour': 'Android'},
+    {'name': 'oreo', 'version': '8.0', 'full_name': 'Android 8.0 Oreo', 'flavour': 'Android'},
+    {'name': 'pie', 'version': '9', 'full_name': 'Android 9 Pie', 'flavour': 'Android'},
 ]
