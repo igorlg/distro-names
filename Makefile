@@ -12,6 +12,11 @@ clean:
 	rm -rvf distro/__pycache__ distro/*.pyc
 	rm -rvf test/__pycache__ test/*.pyc
 
+.PHONY: dev
+dev:
+	@echo "Installing dependencies..."
+	@pip install -r requirements.txt
+
 .PHONY: test
 test:
 	@echo "Running tests..."
