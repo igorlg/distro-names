@@ -3,9 +3,10 @@
 
 """distro.distro: provides entry point main()."""
 
-__version__ = '0.0.4'
+__version__ = '0.0.5'
 
 import argparse
+import sys
 
 from distro.data import DATA
 
@@ -20,7 +21,7 @@ def main():
 
     if args.version:
         print('v' + __version__)
-        exit(0)
+        sys.exit()
 
     distros = load()
     results = search(args.search_term, distros)
