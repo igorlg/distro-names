@@ -1,39 +1,37 @@
-.PHONY: default
-default: clean test build publish
-
-.PHONY: clean
 clean:
-	@echo "Cleaning up..."
-	rm -rvf build/
-	rm -rvf dist/
-	rm -rvf distro_names.egg-info
-	rm -rvf .pytest_cache
-	rm -rvf MANIFEST.in
-	rm -rvf distro/__pycache__ distro/*.pyc
-	rm -rvf test/__pycache__ test/*.pyc
+	rm -rf dist/
+	find . -type d -name __pycache__ -exec rm -rf {} \;
 
-.PHONY: dev
+target:
+	@$(MAKE) pr
+
 dev:
-	@echo "Installing dependencies..."
-	@pip install -r requirements.txt
+	pip install --upgrade pip poetry pre-commit
+	pre-commit install
 
-.PHONY: test
 test:
-	@echo "Running tests..."
-	@pylint distro
-	@pytest
+	poetry run pytest -vvv
 
-.PHONY: build
-build: clean
-	@python setup.py sdist bdist bdist_egg
-	@twine check dist/*
+pr: test
 
-.PHONY: test-publish
-test-publish: build
-	@rm -f dist/distro-names-*mac*.tar.gz
-	@twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+# build: pr
+build:
+	poetry build
 
-.PHONY: publish
-publish: build
-	@rm -f dist/distro-names-*mac*.tar.gz
-	@twine upload dist/*
+#
+# Use `poetry version <major>/<minor>/<patch>` for version bump
+#
+release-prod:
+	poetry config pypi-token.pypi ${PYPI_TOKEN}
+	poetry publish -n
+
+release-test:
+	poetry config repositories.testpypi https://test.pypi.org/legacy
+	poetry config pypi-token.pypi ${PYPI_TEST_TOKEN}
+	poetry publish --repository testpypi -n
+
+release: pr
+	poetry build
+	$(MAKE) release-test
+	$(MAKE) release-prod
+

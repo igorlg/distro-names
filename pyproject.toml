@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "distro-names"
+version = "0.1.0"
+description = "Search for the names and versions of popular OS distributions"
+authors = ["Igor Gentil <igorlg@amazon.com>"]
+classifiers=[
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+]
+packages = [
+    { include = "distro" }
+]
+repository = "https://github.com/igorlg/distro-names"
+license = "MIT-0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
