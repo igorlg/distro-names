@@ -1,6 +1,6 @@
 clean:
-	rm -rf dist/
-	find . -type d -name __pycache__ -exec rm -rf {} \;
+	rm -rf dist/ .pytest_cache/
+	find . -type d -name __pycache__ -delete
 
 target:
 	@$(MAKE) pr
