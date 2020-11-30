@@ -16,6 +16,10 @@ pr: test
 
 # build: pr
 build:
+	# IN PROGRESS, STILL NOT WORKING
+	# Intended to update __version__ in the distro.py file to match what's on Poetry's config
+	ver="$(poetry version | awk '{print $2}')"
+	sed -i "s/__version__.*/__version__\ =\ \'${ver}\'/" distro/distro.py
 	poetry build
 
 #
