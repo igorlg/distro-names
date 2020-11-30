@@ -63,6 +63,7 @@ DATA = [
     {'name': 'tina', 'version': '19.2', 'flavour': 'Mint'},
     {'name': 'tricia', 'version': '19.3', 'flavour': 'Mint'},
     {'name': 'ulyana', 'version': '20', 'flavour': 'Mint'},
+    {'name': 'ulyssa', 'version': '20.1', 'flavour': 'Mint'},
 
     # Mac OS X (source: https://en.wikipedia.org/wiki/MacOS#Release_history)
     {'name': 'cheetah', 'version': '10.0', 'full_name': 'Mac OS X 10.0 Cheetah', 'flavour': 'MacOS'},
@@ -98,4 +99,6 @@ DATA = [
     {'name': 'nougat', 'version': '7.0', 'full_name': 'Android 7.0 Nougat', 'flavour': 'Android'},
     {'name': 'oreo', 'version': '8.0', 'full_name': 'Android 8.0 Oreo', 'flavour': 'Android'},
     {'name': 'pie', 'version': '9', 'full_name': 'Android 9 Pie', 'flavour': 'Android'},
+    {'name': 'android10', 'version': '10', 'full_name': 'Android 10', 'flavour': 'Android'},
+    {'name': 'android11', 'version': '11', 'full_name': 'Android 11', 'flavour': 'Android'},
 ]
